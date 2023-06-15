@@ -1,13 +1,15 @@
 const form = document.querySelector(`#convertForm`);
 const rgbDisplay = document.querySelector(`#rgbDisplay`);
 const hexDisplay = document.querySelector(`#hexDisplay`);
+const resultDisplay = document.querySelector(`#resultDisplay`);
 
 form.addEventListener(`submit`, function (e) {
   e.preventDefault();
   const r = form.elements.red.value;
   const g = form.elements.green.value;
   const b = form.elements.blue.value;
-  rgbDisplay.innerText = `Your color: RGB(${r}, ${g}, ${b})`;
+  resultDisplay.innerText = `Your color in:`;
+  rgbDisplay.innerText = `RGB(${r}, ${g}, ${b})`;
   hexDisplay.innerText = hex(23, 34, 45);
 });
 
