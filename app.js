@@ -8,11 +8,22 @@ form.addEventListener(`submit`, function (e) {
   const r = form.elements.red.value;
   const g = form.elements.green.value;
   const b = form.elements.blue.value;
-  resultDisplay.innerText = `Your color in:`;
+  resultDisplay.innerText = `Your color is:`;
+
   rgbDisplay.innerText = `RGB(${r}, ${g}, ${b})`;
-  hexDisplay.innerText = hex(23, 34, 45);
+  //hexDisplay.innerText = valueToHex(r) + valueToHex(g) + valueToHex(b);
+  console.log(r, g, b);
 });
 
-function hex(r, g, b) {
-  return `#` + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-}
+//function valueToHex(c) {
+//var hex = c.toString(16);
+//return hex;
+//}
+
+//function rgbToHex(r, g, b) {
+//return valueToHex(r) + valueToHex(g) + valueToHex(b);
+//}
+
+//function hex(r, g, b) {
+//return `#` + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+//}
